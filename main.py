@@ -3,11 +3,21 @@ import re
 
 
 def RE():
-    ex = r"(^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"
-    cadena = "correo.prueba@dominio.com"
+    #Email
+    #ex = r"(^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"
+    #cadena = "correo.prueba@dominio.com"
+
+    #Numero de telefono valido
+    #ex = r"(^3[0-9]{9}$)"
+    #cadena = "3215030353"
+
+    # Fechas DD/MM/AAAA
+    ex = r"([0-2][0-9]|3[0-1])(\/|-)(0[1-9]|1[0-2])\2(\d{4})"
+    cadena = "27-12-2002"
+
 
     if re.match(ex, cadena) is None:
-        print("No es una cadena valida")
+        print("NO es una cadena valida")
     else:
         print("Es una cadena valida")
 
@@ -50,6 +60,6 @@ def GIC():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     #GIC()
-    REFullMatch()
+    RE()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
