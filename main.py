@@ -52,7 +52,8 @@ def GIC():
             """
 
         grammar1 = nltk.CFG.fromstring(g1)
-        oracion = "while a > 1 1 + 1 end".split()
+        inp = input('Ingrese la cade a evaluar: ')
+        oracion = inp.split()
         # guardamos todos los posibles análisis sintácticos en trees
         rdParser = nltk.ChartParser(grammar1)
         for tree in rdParser.parse(oracion):
